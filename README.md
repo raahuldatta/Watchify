@@ -1,51 +1,68 @@
-# 🎬 Watchify - AI-Powered Movie Recommendation Platform
+# 🎬 Watchify — AI-Powered Movie Recommendation System
 
-### Intelligent Movie Discovery using Next.js, React, and AI-Powered Recommendations
+### Personalized Movie Discovery using Modern Web Technologies & Recommendation Systems
 
-A modern, full-stack movie discovery and recommendation platform designed to provide personalized movie suggestions through an intuitive, responsive interface.
+Watchify is a modern full-stack movie recommendation application designed to help users discover movies based on their preferences, movie metadata, genres, languages, and recommendation logic.
 
-Watchify combines **AI-powered recommendation logic**, real-time movie data, advanced filtering, multi-language support, and a modern Next.js architecture to create a personalized movie discovery experience.
+The application combines a modern Next.js frontend with external movie APIs and a recommendation layer to provide personalized movie discovery in an intuitive and responsive interface.
 
 ---
 
 ## 📌 Table of Contents
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Recommendation System](#-recommendation-system)
-- [Technology Stack](#️-technology-stack)
-- [Project Structure](#-project-structure)
-- [Prerequisites](#-prerequisites)
-- [Quickstart Guide](#-quickstart-guide)
-- [Environment Variables](#-environment-variables)
-- [API Integration](#-api-integration)
-- [Deployment](#-deployment)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
+* [Overview](#-overview)
+* [Key Features](#-key-features)
+* [System Architecture](#️-system-architecture)
+* [Recommendation System](#-recommendation-system)
+
+  * [Recommendation Pipeline](#recommendation-pipeline)
+  * [Recommendation Approaches](#recommendation-approaches)
+* [Technology Stack](#️-technology-stack)
+* [Project Directory Structure](#-project-directory-structure)
+* [Quickstart Guide](#-quickstart-guide)
+* [API Integration](#-api-integration)
+* [Environment Variables](#-environment-variables)
+* [Deployment](#-deployment)
+* [Development & Testing](#-development--testing)
+* [Future Improvements](#-future-improvements)
+* [Contributing](#-contributing)
+* [License](#-license)
+* [Acknowledgments](#-acknowledgments)
+* [Author](#-author)
 
 ---
 
 # 🔬 Overview
 
-Movie streaming platforms contain thousands of titles, making it increasingly difficult for users to discover content that matches their interests.
+Movie discovery can become difficult when users have access to thousands of titles across different genres, languages, release periods, and categories.
 
-Watchify addresses this problem by providing an **AI-powered movie recommendation platform** that combines movie metadata, user preferences, search capabilities, and recommendation logic into a single application.
+Watchify addresses this problem by combining movie metadata, user preferences, search functionality, and recommendation logic into a single movie discovery platform.
 
-The platform provides:
+The application is designed around the following workflow:
 
-- Personalized movie recommendations
-- Real-time movie information
-- Advanced movie search
-- Genre-based filtering
-- Multi-language movie discovery
-- Responsive user interface
-- Dark mode support
-- Modern component architecture
-- API-driven movie data
+```text
+                         User
+                          │
+                          ▼
+                  User Preferences
+                          │
+                          ▼
+                   Movie Discovery
+                          │
+                          ▼
+                  Movie Information
+                          │
+                          ▼
+                 Recommendation Logic
+                          │
+                          ▼
+                  Ranked Suggestions
+                          │
+                          ▼
+                 Personalized Results
+```
 
-The application is built using **Next.js 15, React 19, and TypeScript**, with Redux Toolkit used for application state management.
+Watchify can be extended with increasingly sophisticated recommendation and machine-learning approaches while maintaining the existing application architecture.
 
 ---
 
@@ -53,22 +70,20 @@ The application is built using **Next.js 15, React 19, and TypeScript**, with Re
 
 ## 🤖 AI-Powered Recommendations
 
-Watchify provides personalized movie recommendations based on user preferences and available movie information.
+Watchify provides personalized movie recommendations based on available movie metadata and user preferences.
 
-The recommendation layer is designed to help users discover movies beyond traditional keyword-based search.
+The recommendation layer helps users discover movies beyond traditional keyword-based search.
 
 ---
 
 ## 🔎 Advanced Movie Search
 
-Search and discover movies using multiple filtering options including:
+Search and discover movies using multiple filtering options, including:
 
-- Movie title
-- Genre
-- Language
-- Additional movie metadata
-
-This makes it easier to narrow down a large movie catalog and discover relevant content.
+* Movie title
+* Genre
+* Language
+* Movie metadata
 
 ---
 
@@ -80,7 +95,7 @@ Watchify supports movie discovery across multiple languages, allowing users to e
 
 ## ⚡ Real-Time Movie Data
 
-Movie information is retrieved through external movie APIs, allowing the application to work with up-to-date movie information rather than relying exclusively on static data.
+Movie information is retrieved through external movie APIs, allowing the application to work with current movie information rather than relying exclusively on static data.
 
 ---
 
@@ -90,12 +105,12 @@ The application provides a modern interface designed for different screen sizes.
 
 ### UI capabilities include:
 
-- Responsive layouts
-- Dark mode
-- Animated interactions
-- Reusable UI components
-- Modern navigation
-- Interactive movie discovery
+* Responsive layouts
+* Dark mode
+* Animated interactions
+* Reusable UI components
+* Modern navigation
+* Interactive movie discovery
 
 ---
 
@@ -105,52 +120,63 @@ Watchify includes dark-mode support for a comfortable viewing experience, partic
 
 ---
 
-# ⚙️ System Architecture
+# 🏗️ System Architecture
 
-The application follows a modern full-stack Next.js architecture.
+The high-level architecture of Watchify is represented below:
 
 ```text
-                         ┌──────────────────────┐
-                         │       User           │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │   Watchify Frontend  │
-                         │  Next.js + React     │
-                         └──────────┬───────────┘
-                                    │
-                    ┌───────────────┼────────────────┐
-                    │               │                │
-                    ▼               ▼                ▼
-             ┌────────────┐ ┌─────────────┐ ┌──────────────┐
-             │   Search   │ │Recommendation│ │  Filtering  │
-             │   System   │ │    Engine     │ │   System    │
-             └─────┬──────┘ └──────┬──────┘ └──────┬───────┘
-                   │               │               │
-                   └───────────────┼───────────────┘
+                         ┌───────────────────┐
+                         │       User        │
+                         └─────────┬─────────┘
                                    │
                                    ▼
-                         ┌──────────────────────┐
-                         │    Next.js API       │
-                         │       Routes         │
-                         └──────────┬───────────┘
-                                    │
-                           ┌────────┴────────┐
-                           │                 │
-                           ▼                 ▼
-                   ┌──────────────┐  ┌──────────────┐
-                   │   TMDb API   │  │   IMDb API   │
-                   │ Movie Data   │  │ Movie Data   │
-                   └──────────────┘  └──────────────┘
+                         ┌───────────────────┐
+                         │   Next.js App     │
+                         │   React Frontend  │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │    API Layer      │
+                         └─────────┬─────────┘
+                                   │
+                    ┌──────────────┴──────────────┐
+                    │                             │
+                    ▼                             ▼
+             ┌─────────────┐              ┌─────────────┐
+             │   TMDb API  │              │   IMDb API  │
+             └──────┬──────┘              └──────┬──────┘
+                    │                             │
+                    └──────────────┬──────────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │  Movie Metadata   │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │ Recommendation    │
+                         │     Engine        │
+                         └─────────┬─────────┘
+                                   │
+                                   ▼
+                         ┌───────────────────┐
+                         │ Ranked Suggestions│
+                         └───────────────────┘
+```
 
-Watchify can be extended with increasingly sophisticated recommendation and machine-learning approaches while maintaining the existing application architecture.
+---
 
-#Recommendation System
-The recommendation functionality is designed around personalized movie discovery.
+# 🧠 Recommendation System
+
+The recommendation functionality is designed around **personalized movie discovery**.
+
 The system can use available movie metadata and user preferences to identify movies that are relevant to the user.
 
-#Recommendation Pipeline
+## Recommendation Pipeline
+
+```text
 User Preferences
        │
        ▼
@@ -173,24 +199,31 @@ Filtered Movie Results
        │
        ▼
 Personalized Recommendations
+```
 
-The recommendation layer can incorporate multiple recommendation strategies.
+## Recommendation Approaches
 
-# Recommendation Approaches
-1. Content-Based Filtering
+### 1. Content-Based Filtering
+
 Recommendations can be generated using movie attributes such as:
-Genre
-Language
-Keywords
-Cast
-Directors
-Movie descriptions
-Similar movie metadata
+
+* Genre
+* Language
+* Keywords
+* Cast
+* Directors
+* Movie descriptions
+* Similar movie metadata
+
 Movies with similar characteristics can be ranked as potential recommendations.
 
-2. Similarity-Based Recommendations
+---
+
+### 2. Similarity-Based Recommendations
+
 Movie metadata can be transformed into feature representations and compared using similarity metrics.
-For example:
+
+```text
 Movie A
    │
    ├── Genre
@@ -206,20 +239,31 @@ Movie A
           │
           ▼
      Similar Movies
+```
 
-3. User Preference Modeling
+---
+
+### 3. User Preference Modeling
+
 Future versions can maintain user preference signals such as:
-Preferred genres
-Favorite languages
-Previously watched movies
-Ratings
-Watchlist activity
-Search history
-Interaction patterns
+
+* Preferred genres
+* Favorite languages
+* Previously watched movies
+* Ratings
+* Watchlist activity
+* Search history
+* Interaction patterns
+
 These signals can be used to improve recommendation relevance.
 
-4. Collaborative Filtering
+---
+
+### 4. Collaborative Filtering
+
 Collaborative filtering can be introduced to identify patterns between users and movies.
+
+```text
 Users
  │
  ├── User A ──► Movie 1
@@ -241,10 +285,16 @@ Users
             │
             ▼
 
- Recommended Movies
+     Recommended Movies
+```
 
- 5. Hybrid Recommendation System
-A future hybrid architecture can combine:
+---
+
+### 5. Hybrid Recommendation System
+
+A future hybrid architecture can combine multiple recommendation strategies:
+
+```text
 Content-Based Filtering
           │
           ├─────────────┐
@@ -261,89 +311,56 @@ User Preferences   Collaborative Filtering
                  │
                  ▼
         Personalized Results
+```
 
-This approach can provide more robust recommendations by combining multiple sources of information.
+---
 
-⚙️ System Architecture
-The high-level Watchify architecture can be represented as:
-                         ┌───────────────────┐
-                         │       User        │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │   Next.js App     │
-                         │   React Frontend  │
-                         └─────────┬─────────┘
-                                   │
-                  ┌────────────────┼────────────────┐
-                  │                │                │
-                  ▼                ▼                ▼
-             Movie Search     Preferences     Recommendations
-                  │                │                │
-                  └────────────────┼────────────────┘
-                                   ▼
-                         ┌───────────────────┐
-                         │    API Layer      │
-                         └─────────┬─────────┘
-                                   │
-                    ┌──────────────┴──────────────┐
-                    ▼                             ▼
-             ┌─────────────┐              ┌─────────────┐
-             │   TMDb API  │              │   IMDb API  │
-             └──────┬──────┘              └──────┬──────┘
-                    │                             │
-                    └──────────────┬──────────────┘
-                                   ▼
-                         ┌───────────────────┐
-                         │  Movie Metadata   │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │ Recommendation    │
-                         │     Engine        │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │ Ranked Suggestions│
-                         └───────────────────┘
+# 🛠️ Technology Stack
 
-🛠️ Technology Stack
-# Frontend
-1. Next.js 15
-2. React 19
-3. TypeScript
+## Frontend
 
-# Styling & Animation
-1. Tailwind CSS
-2. Framer Motion
-3. UI Components
-4. Radix UI
-5. shadcn/ui
+* **Next.js 15**
+* **React 19**
+* **TypeScript**
 
-# State Management
-Redux Toolkit
+## Styling & Animation
 
-#APIs
-1. TMDb API
-2. IMDb API
+* **Tailwind CSS**
+* **Framer Motion**
 
-#Development
-1. Node.js
-2. npm / Yarn
-3. Git
-4. GitHub
+## UI Components
 
-📁 Project Directory Structure
+* **Radix UI**
+* **shadcn/ui**
+
+## State Management
+
+* **Redux Toolkit**
+
+## APIs
+
+* **TMDb API**
+* **IMDb API**
+
+## Development
+
+* **Node.js**
+* **npm / Yarn**
+* **Git**
+* **GitHub**
+
+---
+
+# 📁 Project Directory Structure
+
+```text
 watchify/
 │
 ├── app/
 │   ├── api/                    # Next.js API routes
 │   ├── recommendations/       # Recommendation pages and functionality
 │   ├── about/                 # About page
-│   └── ...                     # Other application routes
+│   └── ...                    # Other application routes
 │
 ├── components/
 │   ├── ui/                    # Reusable UI components
@@ -363,35 +380,96 @@ watchify/
 ├── next.config.*              # Next.js configuration
 ├── tailwind.config.*          # Tailwind configuration
 ├── tsconfig.json              # TypeScript configuration
-└── README.md                 # Project documentation
+└── README.md                  # Project documentation
+```
 
-🚀 Quickstart Guide
-1. Prerequisites
+---
+
+# 🚀 Quickstart Guide
+
+## 1. Prerequisites
+
 Make sure the following are installed:
-Node.js 18 or later
-npm or Yarn
-Git
+
+* Node.js 18 or later
+* npm or Yarn
+* Git
 
 Verify your installation:
+
+```bash
 node --version
 npm --version
 git --version
+```
 
-2. Clone the Repository
+---
+
+## 2. Clone the Repository
+
+```bash
 git clone <your-repository-url>
 cd watchify
+```
 
-3. Install Dependencies
+---
+
+## 3. Install Dependencies
+
 Using npm:
+
+```bash
 npm install
-Or using Yarn:
-yarn install
+```
 
-5. Start the Development Server
-Using npm:
-npm run dev
 Or using Yarn:
+
+```bash
+yarn install
+```
+
+---
+
+## 4. Configure Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+TMDB_API_KEY=your_tmdb_api_key
+IMDB_API_KEY=your_imdb_api_key
+```
+
+> ⚠️ **Important:** Never commit API keys, secrets, or environment files to GitHub.
+
+---
+
+## 5. Start the Development Server
+
+Using npm:
+
+```bash
+npm run dev
+```
+
+Or using Yarn:
+
+```bash
 yarn dev
+```
+
+---
+
+## 6. Open the Application
+
+Open the following URL in your browser:
+
+```text
+http://localhost:3000
+```
+
+The Watchify application should now be running locally.
+
+---
 
 # 🔌 API Integration
 
@@ -401,15 +479,15 @@ Watchify integrates with external movie APIs to retrieve movie information and e
 
 The **TMDb API** provides movie-related information used throughout the application, including:
 
-- 🎬 Movie titles
-- 🖼️ Movie posters
-- 🎭 Genres
-- 🌍 Languages
-- 📅 Release dates
-- 📝 Movie descriptions
-- ⭐ Ratings
-- 🎭 Cast information
-- 🎥 Movie metadata
+* 🎬 Movie titles
+* 🖼️ Movie posters
+* 🎭 Genres
+* 🌍 Languages
+* 📅 Release dates
+* 📝 Movie descriptions
+* ⭐ Ratings
+* 🎭 Cast information
+* 🎥 Movie metadata
 
 ---
 
@@ -418,13 +496,197 @@ The **TMDb API** provides movie-related information used throughout the applicat
 The **IMDb API** can be used to supplement movie information and provide additional metadata for movie discovery and recommendation functionality.
 
 ---
+
+# 🔐 Environment Variables
+
+Watchify may require API credentials for external movie services.
+
+Create a `.env.local` file in the root directory of the project:
+
+```env
+TMDB_API_KEY=your_tmdb_api_key
+IMDB_API_KEY=your_imdb_api_key
+```
+
+Environment variables should be stored locally in:
+
+```text
+.env.local
+```
+
+> ⚠️ **Important:** Never commit API keys, secrets, or environment files to GitHub.
+
+For production deployments, configure these variables through the environment-variable settings provided by your hosting platform.
+
+---
+
+# 🌐 Deployment
+
+## ▲ Vercel — Recommended
+
+Watchify is built with **Next.js** and can be easily deployed using [Vercel](https://vercel.com/).
+
+### Deployment Steps
+
+1. Push the project repository to GitHub.
+2. Import the repository into Vercel.
+3. Configure the required environment variables.
+4. Deploy the application.
+
+After deployment, Vercel automatically builds and hosts the Next.js application.
+
+---
+
+## Other Deployment Platforms
+
+Watchify can also be adapted for deployment on:
+
+* **Netlify**
+* **Railway**
+* **DigitalOcean**
+* **Other Node.js-compatible hosting platforms**
+
+---
+
+# 🧪 Development & Testing
+
+## Development Server
+
+Start the development server using:
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Production Build
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+---
+
+## Production Server
+
+Start the production server:
+
+```bash
+npm start
+```
+
+These commands can be used to verify the application during development and before deploying to production.
+
+---
+
+# 🔮 Future Improvements
+
+Potential improvements for Watchify include:
+
+* [ ] User authentication
+* [ ] User profiles
+* [ ] Personalized user preferences
+* [ ] Watchlists
+* [ ] Movie ratings
+* [ ] Rating-based recommendations
+* [ ] Personalized recommendation history
+* [ ] Advanced recommendation models
+* [ ] Content-based filtering
+* [ ] Collaborative filtering
+* [ ] Hybrid recommendation engine
+* [ ] Recommendation explanations
+* [ ] Similar-movie discovery
+* [ ] Personalized home page
+* [ ] Social movie recommendations
+* [ ] Streaming availability information
+* [ ] AI-powered movie chatbot
+* [ ] Recommendation evaluation metrics
+* [ ] Recommendation ranking optimization
+* [ ] User feedback-based recommendation refinement
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome and appreciated!
+
+### 1. Fork the Repository
+
+Fork the Watchify repository to your GitHub account.
+
+### 2. Create a Feature Branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+### 3. Make Your Changes
+
+Implement your feature, improvement, or bug fix.
+
+### 4. Commit Your Changes
+
+```bash
+git add .
+git commit -m "Add: your feature"
+```
+
+### 5. Push the Branch
+
+```bash
+git push origin feature/your-feature
+```
+
+### 6. Open a Pull Request
+
+Create a Pull Request with a clear description of the changes you made.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the `LICENSE` file for more information.
+
+---
+
+# 🙏 Acknowledgments
+
+Special thanks to:
+
+* [TMDb](https://www.themoviedb.org/) for providing movie data
+* [shadcn/ui](https://ui.shadcn.com/) for reusable UI components
+* [Radix UI](https://www.radix-ui.com/) for accessible UI primitives
+* The [Next.js](https://nextjs.org/) community
+* The [React](https://react.dev/) community
+* The open-source ecosystem that makes modern web development possible
+
+---
+
 # 👨‍💻 Author
 
 **Raahul Datta**
 
 Full-Stack Developer interested in:
 
-- `Software Development`
-- `AI/ML`
-- `Cloud Computing`
-- `DevOps`
+`Software Development` · `AI/ML` · `Cloud Computing` · `DevOps`
+
+---
+
+<div align="center">
+
+### 🎬 Discover. Explore. Watch.
+
+**Built with ❤️ using Next.js, React & TypeScript**
+
+</div>
