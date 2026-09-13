@@ -1,44 +1,33 @@
-# 🎬 Watchify — AI-Powered Movie Recommendation System
+<div align="center">
 
-### Personalized Movie Discovery using Modern Web Technologies & Recommendation Systems
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Watchify&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20Movie%20Recommendation%20System&descAlignY=58&descSize=16" width="100%"/>
 
-Watchify is a modern full-stack movie recommendation application designed to help users discover movies based on their preferences, movie metadata, genres, languages, and recommendation logic.
+<h1 align="center">🎬 Watchify</h1>
+<p align="center"><i>AI-Powered Movie Recommendation System</i></p>
 
-The application combines a modern Next.js frontend with external movie APIs and a recommendation layer to provide personalized movie discovery in an intuitive and responsive interface.
+<img src="https://img.shields.io/badge/Next.js-15-8B5CF6.svg?style=for-the-badge&logo=nextdotjs&logoColor=white&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/React-19-7C3AED.svg?style=for-the-badge&logo=react&logoColor=white&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/TypeScript-6D28D9.svg?style=for-the-badge&logo=typescript&logoColor=white&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/Tailwind_CSS-4C1D95.svg?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/Redux_Toolkit-A78BFA.svg?style=for-the-badge&logo=redux&logoColor=white&labelColor=1a1a2e"/>
+<img src="https://img.shields.io/badge/License-MIT-8B5CF6.svg?style=for-the-badge&labelColor=1a1a2e"/>
 
----
+<br/><br/>
 
-## 📌 Table of Contents
+<p align="center">
+<b>Personalized Movie Discovery using Modern Web Technologies & Recommendation Systems.</b><br/>
+A modern full-stack movie recommendation application that helps users discover movies based on preferences, movie metadata, genres, languages, and recommendation logic.
+</p>
 
-* [Overview](#-overview)
-* [Key Features](#-key-features)
-* [System Architecture](#️-system-architecture)
-* [Recommendation System](#-recommendation-system)
+</div>
 
-  * [Recommendation Pipeline](#recommendation-pipeline)
-  * [Recommendation Approaches](#recommendation-approaches)
-* [Technology Stack](#️-technology-stack)
-* [Project Directory Structure](#-project-directory-structure)
-* [Quickstart Guide](#-quickstart-guide)
-* [API Integration](#-api-integration)
-* [Environment Variables](#-environment-variables)
-* [Deployment](#-deployment)
-* [Development & Testing](#-development--testing)
-* [Future Improvements](#-future-improvements)
-* [Contributing](#-contributing)
-* [License](#-license)
-* [Acknowledgments](#-acknowledgments)
-* [Author](#-author)
+<br/>
 
 ---
 
-# 🔬 Overview
+## <img src="https://img.shields.io/badge/-Overview-8B5CF6?style=flat-square"/>
 
-Movie discovery can become difficult when users have access to thousands of titles across different genres, languages, release periods, and categories.
-
-Watchify addresses this problem by combining movie metadata, user preferences, search functionality, and recommendation logic into a single movie discovery platform.
-
-The application is designed around the following workflow:
+Movie discovery can become difficult when users have access to thousands of titles across different genres, languages, release periods, and categories. Watchify addresses this by combining movie metadata, user preferences, search functionality, and recommendation logic into a single movie discovery platform.
 
 ```text
                          User
@@ -64,65 +53,24 @@ The application is designed around the following workflow:
 
 Watchify can be extended with increasingly sophisticated recommendation and machine-learning approaches while maintaining the existing application architecture.
 
----
-
-# 🎬 Key Features
-
-## 🤖 AI-Powered Recommendations
-
-Watchify provides personalized movie recommendations based on available movie metadata and user preferences.
-
-The recommendation layer helps users discover movies beyond traditional keyword-based search.
+<br/>
 
 ---
 
-## 🔎 Advanced Movie Search
+## <img src="https://img.shields.io/badge/-Key%20Features-8B5CF6?style=flat-square"/>
 
-Search and discover movies using multiple filtering options, including:
+- **🤖 AI-Powered Recommendations** — personalized movie recommendations based on available movie metadata and user preferences, helping users discover movies beyond traditional keyword-based search.
+- **🔎 Advanced Movie Search** — filter by movie title, genre, language, and movie metadata.
+- **🌍 Multi-Language Support** — movie discovery across multiple languages, not limited to a single region.
+- **⚡ Real-Time Movie Data** — movie information retrieved through external movie APIs rather than static data.
+- **🎨 Modern Responsive UI** — responsive layouts, animated interactions, reusable UI components, and modern navigation across screen sizes.
+- **🌓 Dark Mode** — comfortable browsing in low-light environments.
 
-* Movie title
-* Genre
-* Language
-* Movie metadata
-
----
-
-## 🌍 Multi-Language Support
-
-Watchify supports movie discovery across multiple languages, allowing users to explore content beyond a single language or region.
+<br/>
 
 ---
 
-## ⚡ Real-Time Movie Data
-
-Movie information is retrieved through external movie APIs, allowing the application to work with current movie information rather than relying exclusively on static data.
-
----
-
-## 🎨 Modern Responsive UI
-
-The application provides a modern interface designed for different screen sizes.
-
-### UI capabilities include:
-
-* Responsive layouts
-* Dark mode
-* Animated interactions
-* Reusable UI components
-* Modern navigation
-* Interactive movie discovery
-
----
-
-## 🌓 Dark Mode
-
-Watchify includes dark-mode support for a comfortable viewing experience, particularly when browsing movies in low-light environments.
-
----
-
-# 🏗️ System Architecture
-
-The high-level architecture of Watchify is represented below:
+## <img src="https://img.shields.io/badge/-System%20Architecture-8B5CF6?style=flat-square"/>
 
 ```text
                          ┌───────────────────┐
@@ -166,192 +114,113 @@ The high-level architecture of Watchify is represented below:
                          └───────────────────┘
 ```
 
+<br/>
+
 ---
 
-# 🧠 Recommendation System
+## <img src="https://img.shields.io/badge/-Recommendation%20System-8B5CF6?style=flat-square"/>
 
-The recommendation functionality is designed around **personalized movie discovery**.
+The recommendation functionality is designed around **personalized movie discovery** using available movie metadata and user preferences to surface relevant movies.
 
-The system can use available movie metadata and user preferences to identify movies that are relevant to the user.
-
-## Recommendation Pipeline
+**Pipeline**
 
 ```text
-User Preferences
-       │
-       ▼
-Movie Discovery
-       │
-       ▼
-Metadata & Movie Information
-       │
-       ▼
-Feature Extraction
-       │
-       ▼
-Recommendation Logic
-       │
-       ▼
-Similarity / Ranking
-       │
-       ▼
-Filtered Movie Results
-       │
-       ▼
-Personalized Recommendations
+User Preferences → Movie Discovery → Metadata & Movie Information →
+Feature Extraction → Recommendation Logic → Similarity / Ranking →
+Filtered Movie Results → Personalized Recommendations
 ```
 
-## Recommendation Approaches
+<details>
+<summary><b>1. Content-Based Filtering</b> (current approach)</summary>
+<br/>
 
-### 1. Content-Based Filtering
+Recommendations generated using movie attributes such as genre, language, keywords, cast, directors, movie descriptions, and similar movie metadata. Movies with similar characteristics are ranked as potential recommendations.
 
-Recommendations can be generated using movie attributes such as:
+</details>
 
-* Genre
-* Language
-* Keywords
-* Cast
-* Directors
-* Movie descriptions
-* Similar movie metadata
+<details>
+<summary><b>2. Similarity-Based Recommendations</b> (current approach)</summary>
+<br/>
 
-Movies with similar characteristics can be ranked as potential recommendations.
-
----
-
-### 2. Similarity-Based Recommendations
-
-Movie metadata can be transformed into feature representations and compared using similarity metrics.
+Movie metadata is transformed into feature representations and compared using similarity metrics:
 
 ```text
-Movie A
-   │
-   ├── Genre
-   ├── Language
-   ├── Keywords
-   └── Description
-          │
-          ▼
-     Feature Vector
-          │
-          ▼
-   Similarity Calculation
-          │
-          ▼
-     Similar Movies
+Movie A → Genre / Language / Keywords / Description
+              │
+              ▼
+        Feature Vector
+              │
+              ▼
+     Similarity Calculation
+              │
+              ▼
+        Similar Movies
 ```
 
----
+</details>
 
-### 3. User Preference Modeling
+<details>
+<summary><b>3. User Preference Modeling</b> (planned)</summary>
+<br/>
 
-Future versions can maintain user preference signals such as:
+Future versions can maintain user preference signals such as preferred genres, favorite languages, previously watched movies, ratings, watchlist activity, search history, and interaction patterns to improve recommendation relevance.
 
-* Preferred genres
-* Favorite languages
-* Previously watched movies
-* Ratings
-* Watchlist activity
-* Search history
-* Interaction patterns
+</details>
 
-These signals can be used to improve recommendation relevance.
+<details>
+<summary><b>4. Collaborative Filtering</b> (planned)</summary>
+<br/>
 
----
-
-### 4. Collaborative Filtering
-
-Collaborative filtering can be introduced to identify patterns between users and movies.
+Collaborative filtering can be introduced to identify patterns between users and movies:
 
 ```text
 Users
  │
- ├── User A ──► Movie 1
- │             Movie 4
- │             Movie 7
- │
- ├── User B ──► Movie 1
- │             Movie 4
- │             Movie 9
- │
- └── User C ──► Movie 2
-               Movie 7
-               Movie 9
-
+ ├── User A ──► Movie 1, Movie 4, Movie 7
+ ├── User B ──► Movie 1, Movie 4, Movie 9
+ └── User C ──► Movie 2, Movie 7, Movie 9
             │
             ▼
-
      User Similarity
             │
             ▼
-
      Recommended Movies
 ```
 
----
+</details>
 
-### 5. Hybrid Recommendation System
+<details>
+<summary><b>5. Hybrid Recommendation System</b> (planned)</summary>
+<br/>
 
-A future hybrid architecture can combine multiple recommendation strategies:
+A future hybrid architecture combining content-based filtering, user preferences, and collaborative filtering through a shared ranking engine into one set of personalized results.
 
-```text
-Content-Based Filtering
-          │
-          ├─────────────┐
-          │             │
-          ▼             ▼
-User Preferences   Collaborative Filtering
-          │             │
-          └──────┬──────┘
-                 ▼
-        Hybrid Recommendation
-                 │
-                 ▼
-          Ranking Engine
-                 │
-                 ▼
-        Personalized Results
-```
+</details>
+
+<br/>
 
 ---
 
-# 🛠️ Technology Stack
+## <img src="https://img.shields.io/badge/-Technology%20Stack-8B5CF6?style=flat-square"/>
 
-## Frontend
+<div align="center">
 
-* **Next.js 15**
-* **React 19**
-* **TypeScript**
+| Category | Technology |
+|:--|:--|
+| Frontend | Next.js 15, React 19, TypeScript |
+| Styling & Animation | Tailwind CSS, Framer Motion |
+| UI Components | Radix UI, shadcn/ui |
+| State Management | Redux Toolkit |
+| APIs | TMDb API, IMDb API |
+| Development | Node.js, npm / Yarn, Git, GitHub |
 
-## Styling & Animation
+</div>
 
-* **Tailwind CSS**
-* **Framer Motion**
-
-## UI Components
-
-* **Radix UI**
-* **shadcn/ui**
-
-## State Management
-
-* **Redux Toolkit**
-
-## APIs
-
-* **TMDb API**
-* **IMDb API**
-
-## Development
-
-* **Node.js**
-* **npm / Yarn**
-* **Git**
-* **GitHub**
+<br/>
 
 ---
 
-# 📁 Project Directory Structure
+## <img src="https://img.shields.io/badge/-Project%20Directory%20Structure-8B5CF6?style=flat-square"/>
 
 ```text
 watchify/
@@ -371,31 +240,22 @@ watchify/
 │   └── ...                    # Utility functions
 │
 ├── store/                     # Redux store and state management
-│
 ├── styles/                    # Global styling
-│
 ├── public/                    # Static assets
 │
 ├── package.json               # Project dependencies and scripts
 ├── next.config.*              # Next.js configuration
 ├── tailwind.config.*          # Tailwind configuration
-├── tsconfig.json              # TypeScript configuration
-└── README.md                  # Project documentation
+└── tsconfig.json              # TypeScript configuration
 ```
+
+<br/>
 
 ---
 
-# 🚀 Quickstart Guide
+## <img src="https://img.shields.io/badge/-Quickstart%20Guide-8B5CF6?style=flat-square"/>
 
-## 1. Prerequisites
-
-Make sure the following are installed:
-
-* Node.js 18 or later
-* npm or Yarn
-* Git
-
-Verify your installation:
+**1. Prerequisites** — Node.js 18+, npm or Yarn, Git.
 
 ```bash
 node --version
@@ -403,34 +263,15 @@ npm --version
 git --version
 ```
 
----
-
-## 2. Clone the Repository
+**2. Clone & install**
 
 ```bash
-git clone <your-repository-url>
-cd watchify
+git clone https://github.com/raahuldatta/Watchify.git
+cd Watchify
+npm install    # or: yarn install
 ```
 
----
-
-## 3. Install Dependencies
-
-Using npm:
-
-```bash
-npm install
-```
-
-Or using Yarn:
-
-```bash
-yarn install
-```
-
----
-
-## 4. Configure Environment Variables
+**3. Configure environment variables**
 
 Create a `.env.local` file in the root directory:
 
@@ -439,254 +280,117 @@ TMDB_API_KEY=your_tmdb_api_key
 IMDB_API_KEY=your_imdb_api_key
 ```
 
-> ⚠️ **Important:** Never commit API keys, secrets, or environment files to GitHub.
+> ⚠️ Never commit API keys, secrets, or environment files to GitHub.
 
----
-
-## 5. Start the Development Server
-
-Using npm:
+**4. Run**
 
 ```bash
-npm run dev
+npm run dev    # or: yarn dev
 ```
 
-Or using Yarn:
+Open [http://localhost:3000](http://localhost:3000) — Watchify should now be running locally.
+
+<br/>
+
+---
+
+## <img src="https://img.shields.io/badge/-API%20Integration-8B5CF6?style=flat-square"/>
+
+**🎞️ TMDb API** — provides movie titles, posters, genres, languages, release dates, descriptions, ratings, cast information, and movie metadata used throughout the application.
+
+**🎥 IMDb API** — supplements movie information and provides additional metadata for movie discovery and recommendation functionality.
+
+<br/>
+
+---
+
+## <img src="https://img.shields.io/badge/-Deployment-8B5CF6?style=flat-square"/>
+
+**▲ Vercel (recommended)** — push the repository to GitHub, import it into Vercel, configure the required environment variables, and deploy. Vercel automatically builds and hosts the Next.js application.
+
+Watchify can also be adapted for deployment on Netlify, Railway, DigitalOcean, or other Node.js-compatible hosting platforms.
+
+<br/>
+
+---
+
+## <img src="https://img.shields.io/badge/-Development%20%26%20Testing-8B5CF6?style=flat-square"/>
 
 ```bash
-yarn dev
+npm run dev      # Development server → http://localhost:3000
+npm run build    # Optimized production build
+npm start        # Production server
 ```
 
----
-
-## 6. Open the Application
-
-Open the following URL in your browser:
-
-```text
-http://localhost:3000
-```
-
-The Watchify application should now be running locally.
+<br/>
 
 ---
 
-# 🔌 API Integration
+## <img src="https://img.shields.io/badge/-Future%20Improvements-8B5CF6?style=flat-square"/>
 
-Watchify integrates with external movie APIs to retrieve movie information and enrich the movie discovery and recommendation experience.
+<details>
+<summary><b>View the full roadmap</b></summary>
+<br/>
 
-## 🎞️ TMDb API
+- [ ] User authentication & profiles
+- [ ] Personalized user preferences & watchlists
+- [ ] Movie ratings & rating-based recommendations
+- [ ] Personalized recommendation history
+- [ ] Advanced recommendation models — content-based, collaborative, hybrid
+- [ ] Recommendation explanations
+- [ ] Similar-movie discovery
+- [ ] Personalized home page
+- [ ] Social movie recommendations
+- [ ] Streaming availability information
+- [ ] AI-powered movie chatbot
+- [ ] Recommendation evaluation metrics & ranking optimization
+- [ ] User feedback-based recommendation refinement
 
-The **TMDb API** provides movie-related information used throughout the application, including:
+</details>
 
-* 🎬 Movie titles
-* 🖼️ Movie posters
-* 🎭 Genres
-* 🌍 Languages
-* 📅 Release dates
-* 📝 Movie descriptions
-* ⭐ Ratings
-* 🎭 Cast information
-* 🎥 Movie metadata
-
----
-
-## 🎥 IMDb API
-
-The **IMDb API** can be used to supplement movie information and provide additional metadata for movie discovery and recommendation functionality.
-
----
-
-# 🔐 Environment Variables
-
-Watchify may require API credentials for external movie services.
-
-Create a `.env.local` file in the root directory of the project:
-
-```env
-TMDB_API_KEY=your_tmdb_api_key
-IMDB_API_KEY=your_imdb_api_key
-```
-
-Environment variables should be stored locally in:
-
-```text
-.env.local
-```
-
-> ⚠️ **Important:** Never commit API keys, secrets, or environment files to GitHub.
-
-For production deployments, configure these variables through the environment-variable settings provided by your hosting platform.
+<br/>
 
 ---
 
-# 🌐 Deployment
-
-## ▲ Vercel — Recommended
-
-Watchify is built with **Next.js** and can be easily deployed using [Vercel](https://vercel.com/).
-
-### Deployment Steps
-
-1. Push the project repository to GitHub.
-2. Import the repository into Vercel.
-3. Configure the required environment variables.
-4. Deploy the application.
-
-After deployment, Vercel automatically builds and hosts the Next.js application.
-
----
-
-## Other Deployment Platforms
-
-Watchify can also be adapted for deployment on:
-
-* **Netlify**
-* **Railway**
-* **DigitalOcean**
-* **Other Node.js-compatible hosting platforms**
-
----
-
-# 🧪 Development & Testing
-
-## Development Server
-
-Start the development server using:
-
-```bash
-npm run dev
-```
-
-The application will be available at:
-
-```text
-http://localhost:3000
-```
-
----
-
-## Production Build
-
-Create an optimized production build:
-
-```bash
-npm run build
-```
-
----
-
-## Production Server
-
-Start the production server:
-
-```bash
-npm start
-```
-
-These commands can be used to verify the application during development and before deploying to production.
-
----
-
-# 🔮 Future Improvements
-
-Potential improvements for Watchify include:
-
-* [ ] User authentication
-* [ ] User profiles
-* [ ] Personalized user preferences
-* [ ] Watchlists
-* [ ] Movie ratings
-* [ ] Rating-based recommendations
-* [ ] Personalized recommendation history
-* [ ] Advanced recommendation models
-* [ ] Content-based filtering
-* [ ] Collaborative filtering
-* [ ] Hybrid recommendation engine
-* [ ] Recommendation explanations
-* [ ] Similar-movie discovery
-* [ ] Personalized home page
-* [ ] Social movie recommendations
-* [ ] Streaming availability information
-* [ ] AI-powered movie chatbot
-* [ ] Recommendation evaluation metrics
-* [ ] Recommendation ranking optimization
-* [ ] User feedback-based recommendation refinement
-
----
-
-# 🤝 Contributing
+## <img src="https://img.shields.io/badge/-Contributing-8B5CF6?style=flat-square"/>
 
 Contributions are welcome and appreciated!
 
-### 1. Fork the Repository
-
-Fork the Watchify repository to your GitHub account.
-
-### 2. Create a Feature Branch
-
 ```bash
+# 1. Fork the repository
+# 2. Create a feature branch
 git checkout -b feature/your-feature
-```
-
-### 3. Make Your Changes
-
-Implement your feature, improvement, or bug fix.
-
-### 4. Commit Your Changes
-
-```bash
+# 3. Make your changes
+# 4. Commit
 git add .
 git commit -m "Add: your feature"
-```
-
-### 5. Push the Branch
-
-```bash
+# 5. Push
 git push origin feature/your-feature
+# 6. Open a Pull Request
 ```
 
-### 6. Open a Pull Request
-
-Create a Pull Request with a clear description of the changes you made.
+<br/>
 
 ---
 
-# 📄 License
+## <img src="https://img.shields.io/badge/-License-8B5CF6?style=flat-square"/>
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MIT License** — see the `LICENSE` file for details.
 
-See the `LICENSE` file for more information.
-
----
-
-# 🙏 Acknowledgments
-
-Special thanks to:
-
-* [TMDb](https://www.themoviedb.org/) for providing movie data
-* [shadcn/ui](https://ui.shadcn.com/) for reusable UI components
-* [Radix UI](https://www.radix-ui.com/) for accessible UI primitives
-* The [Next.js](https://nextjs.org/) community
-* The [React](https://react.dev/) community
-* The open-source ecosystem that makes modern web development possible
+<br/>
 
 ---
 
-# 👨‍💻 Author
+## <img src="https://img.shields.io/badge/-Acknowledgments-8B5CF6?style=flat-square"/>
 
-**Raahul Datta**
+Special thanks to [TMDb](https://www.themoviedb.org/) for movie data, [shadcn/ui](https://ui.shadcn.com/) and [Radix UI](https://www.radix-ui.com/) for UI components and primitives, and the [Next.js](https://nextjs.org/) and [React](https://react.dev/) communities.
 
-Full-Stack Developer interested in:
-
-`Software Development` · `AI/ML` · `Cloud Computing` · `DevOps`
-
----
+<br/>
 
 <div align="center">
 
 ### 🎬 Discover. Explore. Watch.
 
-**Built with ❤️ using Next.js, React & TypeScript**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=20,11,6&height=120&section=footer" width="100%"/>
 
 </div>
